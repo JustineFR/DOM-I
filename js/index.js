@@ -77,4 +77,10 @@ mainContentTitle[4].querySelector('p').textContent = siteContent['main-content']
 let middleImage = document.querySelector('.middle-img')
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
-let mainContentText = document
+
+// UPDATE CONTACT
+let contact = document.querySelector(".contact");
+contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"]
+contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
+contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
+contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
