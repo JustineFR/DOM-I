@@ -84,3 +84,7 @@ contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contac
 contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
 contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
 contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
+
+// UPDATE FOOTER
+let footer = document.querySelector('footer p')
+footer.textContent = siteContent['footer']['copyright']
