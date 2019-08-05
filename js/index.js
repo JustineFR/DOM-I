@@ -43,7 +43,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // UPDATE NAVIGATION LINKS
-let navLinks = document.querySelectorAll("nav a")
+let navLinks = document.querySelectorAll("nav a");
 navLinks[0].textContent = siteContent['nav']['nav-item-1'];
 navLinks[1].textContent = siteContent['nav']['nav-item-2'];
 navLinks[2].textContent = siteContent['nav']['nav-item-3'];
@@ -88,3 +88,23 @@ contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
 // UPDATE FOOTER
 let footer = document.querySelector('footer p')
 footer.textContent = siteContent['footer']['copyright']
+
+// STEP 3 - Add new content
+
+// Change the color of the navigation text to be green.
+navLinks.forEach((link) => {
+link.style.color = "green";
+})
+
+// navLinks[0].style.color = "green"; One by one
+// navLinks[1].style.color = "green"; One by one
+
+// Add 2 nav links
+const newNavLinks = document.querySelectorAll("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.textContent = name;
+  return newNode;
+}
+newNavLinks.prepend(createNewNode("Extra Item 1"));
+newNavLinks.append(createNewNode("Extra Item 2"));
