@@ -62,10 +62,19 @@ let ctaImage = document.getElementById('cta-img')
 ctaImage.setAttribute('src', siteContent['cta']['img-src'])
 
 // UPDATE MAIN CONTENT
-let topContent = document.getElementsByClassName('text-content')
-console.log(topContent)
-topContent[0].textContent = siteContent['main-content']['features-h4']
-topContent[1].textContent = siteContent['main-content']['about-h4']
-topContent[2].textContent = siteContent['main-content']['services-h4']
-topContent[3].textContent = siteContent['main-content']['product-h4']
-topContent[4].textContent = siteContent['main-content']['vision-h4']
+let mainContentTitle = document.getElementsByClassName('text-content')
+mainContentTitle[0].querySelector('h4').textContent = siteContent['main-content']['features-h4']
+mainContentTitle[0].querySelector('p').textContent = siteContent['main-content']['features-content']
+mainContentTitle[1].querySelector('h4').textContent = siteContent['main-content']['about-h4']
+mainContentTitle[1].querySelector('p').textContent = siteContent['main-content']['about-content']
+mainContentTitle[2].querySelector('h4').textContent = siteContent['main-content']['services-h4']
+mainContentTitle[2].querySelector('p').textContent = siteContent['main-content']['services-content']
+mainContentTitle[3].querySelector('h4').textContent = siteContent['main-content']['product-h4']
+mainContentTitle[3].querySelector('p').textContent = siteContent['main-content']['product-content']
+mainContentTitle[4].querySelector('h4').textContent = siteContent['main-content']['vision-h4']
+mainContentTitle[4].querySelector('p').textContent = siteContent['main-content']['vision-content']
+
+let middleImage = document.querySelector('.middle-img')
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+let mainContentText = document
