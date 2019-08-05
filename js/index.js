@@ -60,3 +60,12 @@ ctaButton.textContent = siteContent['cta']['button']
 
 let ctaImage = document.getElementById('cta-img')
 ctaImage.setAttribute('src', siteContent['cta']['img-src'])
+
+// UPDATE MAIN CONTENT
+let topContent = document.getElementsByClassName('text-content')
+console.log(topContent)
+topContent[0].textContent = siteContent['main-content']['features-h4']
+topContent[1].textContent = siteContent['main-content']['about-h4']
+topContent[2].textContent = siteContent['main-content']['services-h4']
+topContent[3].textContent = siteContent['main-content']['product-h4']
+topContent[4].textContent = siteContent['main-content']['vision-h4']
