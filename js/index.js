@@ -40,3 +40,71 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// UPDATE NAVIGATION LINKS
+let navLinks = document.querySelectorAll("nav a");
+navLinks[0].textContent = siteContent['nav']['nav-item-1'];
+navLinks[1].textContent = siteContent['nav']['nav-item-2'];
+navLinks[2].textContent = siteContent['nav']['nav-item-3'];
+navLinks[3].textContent = siteContent['nav']['nav-item-4'];
+navLinks[4].textContent = siteContent['nav']['nav-item-5'];
+navLinks[5].textContent = siteContent['nav']['nav-item-6'];
+
+// UPDATE CTA
+let ctaTitle = document.querySelector('h1')
+ctaTitle.textContent = siteContent['cta']['h1']
+
+let ctaButton = document.querySelector('button')
+ctaButton.textContent = siteContent['cta']['button']
+
+let ctaImage = document.getElementById('cta-img')
+ctaImage.setAttribute('src', siteContent['cta']['img-src'])
+
+// UPDATE MAIN CONTENT
+let mainContentTitle = document.getElementsByClassName('text-content')
+mainContentTitle[0].querySelector('h4').textContent = siteContent['main-content']['features-h4']
+mainContentTitle[0].querySelector('p').textContent = siteContent['main-content']['features-content']
+mainContentTitle[1].querySelector('h4').textContent = siteContent['main-content']['about-h4']
+mainContentTitle[1].querySelector('p').textContent = siteContent['main-content']['about-content']
+mainContentTitle[2].querySelector('h4').textContent = siteContent['main-content']['services-h4']
+mainContentTitle[2].querySelector('p').textContent = siteContent['main-content']['services-content']
+mainContentTitle[3].querySelector('h4').textContent = siteContent['main-content']['product-h4']
+mainContentTitle[3].querySelector('p').textContent = siteContent['main-content']['product-content']
+mainContentTitle[4].querySelector('h4').textContent = siteContent['main-content']['vision-h4']
+mainContentTitle[4].querySelector('p').textContent = siteContent['main-content']['vision-content']
+
+let middleImage = document.querySelector('.middle-img')
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
+// UPDATE CONTACT
+let contact = document.querySelector(".contact");
+contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"]
+contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
+contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
+contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
+
+// UPDATE FOOTER
+let footer = document.querySelector('footer p')
+footer.textContent = siteContent['footer']['copyright']
+
+// STEP 3 - Add new content
+
+// Change the color of the navigation text to be green.
+navLinks.forEach((link) => {
+link.style.color = "green";
+})
+
+// navLinks[0].style.color = "green"; One by one
+// navLinks[1].style.color = "green"; One by one
+
+// Add 2 nav links
+const newNavLinks = document.querySelectorAll("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.textContent = name;
+  return newNode;
+}
+newNavLinks.prepend(createNewNode("Extra Item 1"));
+newNavLinks.append(createNewNode("Extra Item 2"));
